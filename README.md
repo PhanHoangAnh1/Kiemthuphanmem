@@ -1,15 +1,15 @@
 # Kiemthuphanmem
 
-CHƯƠNG 1: 
+# CHƯƠNG 1: 
+
 05/01/2026
+
 ![image1](image1.png)
 
-CHƯƠNG 2:Kiểm thử với Junit
+# CHƯƠNG 2: Kiểm thử với Junit 10/01/2026
 
 ## 1. Thông tin chung
-- Họ và tên: Phan Hoàng Anh
-- Mã sinh viên: BCS23016
-- Môn học: Kiểm thử phần mềm
+
 - Công cụ: VS Code, Java, Maven, JUnit 4.
 
 ## 2. Mô tả bài toán
