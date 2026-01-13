@@ -9,7 +9,7 @@
 
 # CHƯƠNG 1: BÀI TẬP TUẦN 1 (05/01/2026)
 
-Kết quả thực hiện bài tập cũ:
+Kết quả thực hiện bài tập:
 
 ![Bài tập 1](image1.png)
 
@@ -64,3 +64,53 @@ Sử dụng **JUnit 4** để viết các kịch bản kiểm thử tự động
 Code đã vượt qua tất cả các bài kiểm thử (All Tests Passed).
 
 ![Kết quả chạy JUnit](image2.png)
+
+---
+
+# CHƯƠNG 3: BÀI TẬP TUẦN 3 (13/01/2026)
+
+## 1. Thông tin chung
+**Yêu cầu:** Kiểm thử End-to-End (E2E) trang web thương mại điện tử mẫu (SauceDemo).
+
+**Công cụ thực hiện:** Node.js, Cypress.
+
+**Trang web kiểm thử:** https://www.saucedemo.com
+
+## 2. Cấu trúc dự án
+```text
+cypress-exercise/
+├── cypress/
+│   └── e2e/
+│       ├── login_spec.cy.js      # Kịch bản kiểm tra Đăng nhập
+│       └── cart_spec.cy.js       # Kịch bản kiểm tra Giỏ hàng & Thanh toán
+├── package.json                  # Cấu hình dự án Node.js
+└── cypress.config.js             # Cấu hình Cypress
+```
+## 3. Kịch bản kiểm thử (Test Cases)
+Đã thực hiện các kịch bản kiểm thử tự động mô phỏng hành vi người dùng thật:
+
+| File Test | Kịch bản (Test Case) | Mô tả chi tiết | Trạng thái |
+|-----------|----------------------|----------------|------------|
+| **Login** | Đăng nhập thành công | Nhập đúng user/pass (`standard_user`) -> Vào trang Inventory. | ✅ Passed |
+| **Login** | Đăng nhập thất bại | Nhập sai user/pass -> Hệ thống hiển thị thông báo lỗi. | ✅ Passed |
+| **Cart** | Thêm vào giỏ hàng | Click "Add to cart" -> Badge giỏ hàng hiện số 1. | ✅ Passed |
+| **Cart** | Lọc sản phẩm | Chọn "Price (low to high)" -> Sản phẩm giá thấp nhất lên đầu. | ✅ Passed |
+| **Cart** | Xóa khỏi giỏ hàng | Click "Remove" -> Badge giỏ hàng biến mất (Bài tập thêm). | ✅ Passed |
+| **Cart** | Quy trình Checkout | Giỏ hàng -> Checkout -> Điền Info -> Continue -> Overview (Bài tập thêm). | ✅ Passed |
+
+## 4. Hướng dẫn chạy (How to run)
+1. Mở terminal tại thư mục `cypress-exercise`.
+2. Cài đặt thư viện (nếu chưa có): `npm install`.
+3. Chạy trình kiểm thử: `npx cypress open`.
+4. Chọn **E2E Testing** -> **Chrome** -> Chọn file spec muốn chạy (`login_spec` hoặc `cart_spec`).
+
+## 5. Kết quả thực hiện
+Toàn bộ kịch bản kiểm thử đều chạy thành công trên trình duyệt Chrome.
+
+**Kết quả 1: Kiểm thử chức năng Đăng nhập (Login Spec)**
+![Kết quả Login](image3.png)
+
+**Kết quả 2: Kiểm thử Giỏ hàng & Thanh toán (Cart Spec)**
+![Kết quả Cart](image4.png)
+
+
